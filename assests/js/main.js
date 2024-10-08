@@ -35,7 +35,7 @@ on_lamp_el.style.display = "none";
 switch_el.addEventListener("click", () => {
 
     // devo verificare se è spenta
-    if (switch_el.innerHTML === "Accendi") {
+    if (switch_el.textContent === "Accendi") {
 
         // far sparire la lampadina spenta
         off_lamp_el.style.display = "none";
@@ -44,7 +44,7 @@ switch_el.addEventListener("click", () => {
         on_lamp_el.style.display = "inline-block";
 
         // cabmbiare la scritta del button
-        switch_el.innerHTML = "Spegni";
+        switch_el.textContent = "Spegni";
 
     } else { // se è accesa
 
@@ -55,7 +55,7 @@ switch_el.addEventListener("click", () => {
         on_lamp_el.style.display = "none";
 
         // cambiare la scritta del button
-        switch_el.innerHTML = "Accendi";
+        switch_el.textContent = "Accendi";
     };
 });
 
