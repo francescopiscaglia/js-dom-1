@@ -34,7 +34,8 @@ on_lamp_el.style.display = "none";
 // bonus
 switch_el.addEventListener("click", () => {
 
-    if (switch_el.innerHTML = "Accendi") {
+    // devo verificare se è spenta
+    if (switch_el.innerHTML === "Accendi") {
 
         // far sparire la lampadina spenta
         off_lamp_el.style.display = "none";
@@ -42,10 +43,10 @@ switch_el.addEventListener("click", () => {
         // far comparire la lampadina accesa
         on_lamp_el.style.display = "inline-block";
 
-        // cambio la scritta del button
+        // cabmbiare la scritta del button
         switch_el.innerHTML = "Spegni";
 
-    } else {
+    } else { // se è accesa
 
         // far sparire la lampadina spenta
         off_lamp_el.style.display = "inline-block";
@@ -53,11 +54,10 @@ switch_el.addEventListener("click", () => {
         // far comparire la lampadina accesa
         on_lamp_el.style.display = "none";
 
-        // cambio la scritta del button
+        // cambiare la scritta del button
         switch_el.innerHTML = "Accendi";
-    }
-
-})
+    };
+});
 
 
 
