@@ -19,23 +19,44 @@ console.log(on_lamp_el, off_lamp_el, switch_el);
 on_lamp_el.style.display = "none";
 
 // tramite un event listener posso cambiare la proprietà display delle lampadine
-switch_el.addEventListener("click", () => {
+// switch_el.addEventListener("click", () => {
 
-    // far sparire la lampadina spenta
-    off_lamp_el.style.display = "none";
+//     // far sparire la lampadina spenta
+//     off_lamp_el.style.display = "none";
 
-    // far comparire la lampadina accesa
-    on_lamp_el.style.display = "inline-block";
+//     // far comparire la lampadina accesa
+//     on_lamp_el.style.display = "inline-block";
 
-    // cambio la scritta del button
-    switch_el.innerHTML = "Spegni";
-})
-
+//     // cambio la scritta del button
+//     switch_el.innerHTML = "Spegni";
+// })
 
 // bonus
 switch_el.addEventListener("click", () => {
 
-    
+    if (switch_el.innerHTML = "Accendi") {
+
+        // far sparire la lampadina spenta
+        off_lamp_el.style.display = "none";
+
+        // far comparire la lampadina accesa
+        on_lamp_el.style.display = "inline-block";
+
+        // cambio la scritta del button
+        switch_el.innerHTML = "Spegni";
+
+    } else {
+
+        // far sparire la lampadina spenta
+        off_lamp_el.style.display = "inline-block";
+
+        // far comparire la lampadina accesa
+        on_lamp_el.style.display = "none";
+
+        // cambio la scritta del button
+        switch_el.innerHTML = "Accendi";
+    }
+
 })
 
 
