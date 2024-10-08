@@ -26,6 +26,16 @@ switch_el.addEventListener("click", () => {
 
     // far comparire la lampadina accesa
     on_lamp_el.style.display = "inline-block";
+
+    // cambio la scritta del button
+    switch_el.innerHTML = "Spegni";
+})
+
+
+// bonus
+switch_el.addEventListener("click", () => {
+
+    
 })
 
 
