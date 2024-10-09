@@ -1,16 +1,16 @@
 // => Preparazione
 
-// seleziono la lampadina accesa tramite id
-const on_lamp_el = document.getElementById("on-lamp");
-
-// seleziono la lampadina spenta tramite id
+// seleziono la lampadina spenta tramite id dalla DOM
 const off_lamp_el = document.getElementById("off-lamp");
 
-// seleziono il bottone tramite id
+// seleziono la lampadina accesa tramite id dalla DOM
+const on_lamp_el = document.getElementById("on-lamp");
+
+// seleziono il bottone tramite id dalla DOM
 const switch_el = document.getElementById("switch");
 
 // stampo in console per controllare se è corretto
-console.log(on_lamp_el, off_lamp_el, switch_el);
+// console.log(on_lamp_el, off_lamp_el, switch_el);
 
 
 // => Elaborazione del codice
@@ -32,10 +32,13 @@ on_lamp_el.style.display = "none";
 // })
 
 // bonus
-switch_el.addEventListener("click", () => {
+switch_el.addEventListener("click", function () {
+
+    // creo una variabile di appoggio per vedere se è presente "Accendi"
+    const is_on = this.textContent === "Accendi"; // true/false
 
     // devo verificare se è spenta
-    if (switch_el.textContent === "Accendi") {
+    if (is_on) {
 
         // far sparire la lampadina spenta
         off_lamp_el.style.display = "none";
@@ -44,7 +47,7 @@ switch_el.addEventListener("click", () => {
         on_lamp_el.style.display = "inline-block";
 
         // cabmbiare la scritta del button
-        switch_el.textContent = "Spegni";
+        this.textContent = "Spegni";
 
     } else { // se è accesa
 
@@ -55,7 +58,7 @@ switch_el.addEventListener("click", () => {
         on_lamp_el.style.display = "none";
 
         // cambiare la scritta del button
-        switch_el.textContent = "Accendi";
+        this.textContent = "Accendi";
     };
 });
 
